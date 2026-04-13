@@ -28,7 +28,7 @@ body {
   background:
     radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 28%),
     radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 22%),
-    linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-2) 34%, #f8fafc 34%, #f8fafc 100%);
+    linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-2) 38%, #f8fafc 38%, #f8fafc 100%);
   line-height: 1.6;
 }
 
@@ -89,12 +89,16 @@ nav {
 .hero {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 72px 24px 56px;
+  padding: 72px 24px 92px;
   display: grid;
   grid-template-columns: 1.35fr 0.9fr;
   gap: 28px;
-  align-items: stretch;
+  align-items: start;
   color: var(--text-white);
+}
+
+.hero-text {
+  min-width: 0;
 }
 
 .eyebrow {
@@ -117,6 +121,7 @@ nav {
 .hero-copy {
   margin: 0 0 28px;
   font-size: 1.08rem;
+  line-height: 1.75;
   color: #dbeafe;
   max-width: 700px;
 }
@@ -278,8 +283,16 @@ a {
 }
 
 @media (max-width: 900px) {
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 28%),
+      radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 22%),
+      linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-2) 44%, #f8fafc 44%, #f8fafc 100%);
+  }
+
   .hero {
     grid-template-columns: 1fr;
+    padding: 64px 24px 76px;
   }
 
   .hero h1 {
@@ -303,7 +316,7 @@ a {
   }
 
   .hero {
-    padding: 56px 20px 40px;
+    padding: 56px 20px 68px;
   }
 
   .hero h1 {
