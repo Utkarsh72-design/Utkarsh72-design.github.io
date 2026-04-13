@@ -28,7 +28,7 @@ body {
   background:
     radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 28%),
     radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 22%),
-    linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-2) 38%, #f8fafc 38%, #f8fafc 100%);
+    linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-2) 46%, #f8fafc 46%, #f8fafc 100%);
   line-height: 1.6;
 }
 
@@ -89,7 +89,7 @@ nav {
 .hero {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 72px 24px 92px;
+  padding: 72px 24px 140px;
   display: grid;
   grid-template-columns: 1.35fr 0.9fr;
   gap: 28px;
@@ -287,12 +287,12 @@ a {
     background:
       radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 28%),
       radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 22%),
-      linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-2) 44%, #f8fafc 44%, #f8fafc 100%);
+      linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-2) 54%, #f8fafc 54%, #f8fafc 100%);
   }
 
   .hero {
     grid-template-columns: 1fr;
-    padding: 64px 24px 76px;
+    padding: 64px 24px 110px;
   }
 
   .hero h1 {
@@ -316,7 +316,7 @@ a {
   }
 
   .hero {
-    padding: 56px 20px 68px;
+    padding: 56px 20px 96px;
   }
 
   .hero h1 {
