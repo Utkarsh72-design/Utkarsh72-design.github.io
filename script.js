@@ -35,6 +35,31 @@ document.addEventListener("DOMContentLoaded", function () {
       if (imageSrc) {
         openLightbox(imageSrc, imageAlt);
       }
+      return;
+    }
+
+    const projectLink = event.target.closest("[data-project-target]");
+    if (projectLink) {
+      event.preventDefault();
+
+      const targetId = projectLink.getAttribute("data-project-target");
+      const allProjectLinks = document.querySelectorAll("[data-project-target]");
+      const allProjectPanels = document.querySelectorAll("[data-project-panel]");
+
+      allProjectLinks.forEach((link) => {
+        link.classList.remove("project-link-active");
+      });
+
+      allProjectPanels.forEach((panel) => {
+        panel.style.display = "none";
+      });
+
+      projectLink.classList.add("project-link-active");
+
+      const targetPanel = document.querySelector(`[data-project-panel="${targetId}"]`);
+      if (targetPanel) {
+        targetPanel.style.display = "block";
+      }
     }
   });
 
@@ -46,4 +71,14 @@ document.addEventListener("DOMContentLoaded", function () {
       closeLightbox();
     }
   });
+
+  const initialProjectLink = document.querySelector("[data-project-target].project-link-active");
+  if (initialProjectLink) {
+    const initialTarget = initialProjectLink.getAttribute("data-project-target");
+    const allProjectPanels = document.querySelectorAll("[data-project-panel]");
+
+    allProjectPanels.forEach((panel) => {
+      panel.style.display = panel.getAttribute("data-project-panel") === initialTarget ? "block" : "none";
+    });
+  }
 });
