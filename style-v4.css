@@ -166,6 +166,25 @@ nav {
   color: var(--text-white);
 }
 
+.hero-home {
+  grid-template-columns: 1.35fr 0.85fr;
+  grid-template-areas:
+    "text card"
+    "logos logos";
+}
+
+.hero-home .hero-text {
+  grid-area: text;
+}
+
+.hero-home .hero-card {
+  grid-area: card;
+}
+
+.hero-home .client-strip-full {
+  grid-area: logos;
+}
+
 .hero-text {
   min-width: 0;
 }
@@ -261,8 +280,12 @@ nav {
 }
 
 .client-strip-section {
-  margin-top: 28px;
-  max-width: 760px;
+  margin-top: 4px;
+}
+
+.client-strip-full {
+  width: 100%;
+  max-width: 100%;
 }
 
 .client-strip-title {
@@ -293,7 +316,7 @@ nav {
   content: "";
   position: absolute;
   top: 0;
-  width: 72px;
+  width: 84px;
   height: 100%;
   z-index: 2;
   pointer-events: none;
@@ -314,13 +337,13 @@ nav {
   align-items: center;
   gap: 18px;
   width: max-content;
-  animation: clientMarquee 26s linear infinite;
+  animation: clientMarquee 28s linear infinite;
 }
 
 .client-logo-card {
   flex: 0 0 auto;
-  width: 140px;
-  height: 64px;
+  width: 154px;
+  height: 72px;
   border-radius: 16px;
   background: rgba(255,255,255,0.96);
   display: flex;
@@ -332,11 +355,51 @@ nav {
 
 .client-logo-card img {
   display: block;
-  max-width: 100%;
-  max-height: 32px;
   width: auto;
   height: auto;
+  max-width: 118px;
+  max-height: 38px;
   object-fit: contain;
+}
+
+.logo-msft {
+  max-width: 126px !important;
+  max-height: 30px !important;
+}
+
+.logo-amazon {
+  max-width: 112px !important;
+  max-height: 34px !important;
+}
+
+.logo-flipkart {
+  max-width: 118px !important;
+  max-height: 34px !important;
+}
+
+.logo-gsk {
+  max-width: 98px !important;
+  max-height: 42px !important;
+}
+
+.logo-ihcl {
+  max-width: 92px !important;
+  max-height: 40px !important;
+}
+
+.logo-kraavo {
+  max-width: 108px !important;
+  max-height: 44px !important;
+}
+
+.logo-nimetler {
+  max-width: 106px !important;
+  max-height: 42px !important;
+}
+
+.logo-galderma {
+  max-width: 118px !important;
+  max-height: 28px !important;
 }
 
 @keyframes clientMarquee {
@@ -588,8 +651,13 @@ a {
       linear-gradient(180deg, #060913 0%, #0a1022 25%, #101933 54%, #f5f7ff 54%, #f7f9fc 100%);
   }
 
-  .hero {
+  .hero,
+  .hero-home {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "card"
+      "logos";
     padding: 64px 24px 110px;
   }
 
@@ -601,8 +669,9 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .client-strip-section {
-    max-width: 100%;
+  .client-logo-card {
+    width: 140px;
+    height: 66px;
   }
 }
 
@@ -629,7 +698,8 @@ a {
     border-radius: 10px;
   }
 
-  .hero {
+  .hero,
+  .hero-home {
     padding: 56px 20px 96px;
   }
 
@@ -642,17 +712,31 @@ a {
   }
 
   .client-strip-section {
-    margin-top: 22px;
+    margin-top: 4px;
+  }
+
+  .client-strip::before,
+  .client-strip::after {
+    width: 48px;
   }
 
   .client-logo-card {
-    width: 122px;
-    height: 56px;
+    width: 124px;
+    height: 58px;
     padding: 8px 12px;
   }
 
-  .client-logo-card img {
-    max-height: 28px;
+  .client-logo-card img,
+  .logo-msft,
+  .logo-amazon,
+  .logo-flipkart,
+  .logo-gsk,
+  .logo-ihcl,
+  .logo-kraavo,
+  .logo-nimetler,
+  .logo-galderma {
+    max-width: 94px !important;
+    max-height: 28px !important;
   }
 
   main {
