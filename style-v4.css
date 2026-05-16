@@ -349,7 +349,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 16px;
+  padding: 8px 14px;
   box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
 }
 
@@ -358,13 +358,13 @@ nav {
   width: auto;
   height: auto;
   max-width: 118px;
-  max-height: 38px;
+  max-height: 44px;
   object-fit: contain;
 }
 
 .logo-msft {
   max-width: 126px !important;
-  max-height: 30px !important;
+  max-height: 42px !important;
 }
 
 .logo-amazon {
@@ -378,28 +378,28 @@ nav {
 }
 
 .logo-gsk {
-  max-width: 98px !important;
-  max-height: 42px !important;
+  max-width: 108px !important;
+  max-height: 50px !important;
 }
 
 .logo-ihcl {
-  max-width: 92px !important;
-  max-height: 40px !important;
-}
-
-.logo-kraavo {
-  max-width: 108px !important;
-  max-height: 44px !important;
-}
-
-.logo-nimetler {
-  max-width: 106px !important;
+  max-width: 96px !important;
   max-height: 42px !important;
 }
 
+.logo-kraavo {
+  max-width: 122px !important;
+  max-height: 52px !important;
+}
+
+.logo-nimetler {
+  max-width: 116px !important;
+  max-height: 52px !important;
+}
+
 .logo-galderma {
-  max-width: 118px !important;
-  max-height: 28px !important;
+  max-width: 126px !important;
+  max-height: 40px !important;
 }
 
 @keyframes clientMarquee {
@@ -735,8 +735,8 @@ a {
   .logo-kraavo,
   .logo-nimetler,
   .logo-galderma {
-    max-width: 94px !important;
-    max-height: 28px !important;
+    max-width: 104px !important;
+    max-height: 34px !important;
   }
 
   main {
